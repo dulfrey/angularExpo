@@ -1,0 +1,31 @@
+.nav-link {
+  cursor:pointer;
+}
+
+.tag-pill{
+  cursor:pointer;
+}
+
+.container{
+  text-align: center;
+}
+
+.banner{
+  background-color:white;
+  border-color: white;
+  height: 600px;
+  font-size: 400px;
+  text-align: center;
+}
+
+.phrase{
+  color: gray;
+  text-align: center;
+  margin-top: 10px;
+}
+
+h1.title{
+  font-size: 400px;
+  color: gray;
+  align: center;
+}

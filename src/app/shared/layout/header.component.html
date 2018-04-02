@@ -1,0 +1,67 @@
+<nav class="navbar navbar-light">
+  <div class="container">
+
+    <!-- Esto se muestra para los usuarios que no han iniciado sesion -->
+    <ul *appShowAuthed="false"
+      class="nav navbar-nav pull-xs-right">
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/">
+          Inicio
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/login"
+          routerLinkActive="active">
+          Iniciar Sesión
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/register"
+          routerLinkActive="active">
+          Registrarse
+        </a>
+      </li>
+
+    </ul>
+
+    <!-- Esto se muestra para usuarios que iniciaron sesion-->
+    <ul *appShowAuthed="true"
+      class="nav navbar-nav pull-xs-right">
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">
+          Inicio
+        </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/settings"
+          routerLinkActive="active">
+          <i class="ion-gear-a"></i>&nbsp;Perfil
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+          [routerLink]="['/profile', currentUser.username]"
+          routerLinkActive="active">
+          <img [src]="currentUser.image" *ngIf="currentUser.image" class="user-pic" />
+          {{ currentUser.username }}
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>

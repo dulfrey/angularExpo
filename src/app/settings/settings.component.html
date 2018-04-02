@@ -1,0 +1,59 @@
+<div class="settings-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 col-xs-12">
+
+        <h1 class="text-xs-center">Su información</h1>
+
+        <app-list-errors [errors]="errors"></app-list-errors>
+
+        <form [formGroup]="settingsForm" (ngSubmit)="submitForm()">
+          <fieldset [disabled]="isSubmitting">
+
+            <fieldset class="form-group">
+              <input class="form-control"
+
+            />    
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+
+            />
+            </fieldset>
+
+            <fieldset class="form-group">
+
+
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+
+             />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+
+
+              />
+            </fieldset>
+
+
+
+          </fieldset>
+        </form>
+
+        <!-- Boton para cerrar sesion -->
+        <hr />
+
+        <button class="btn btn-outline-danger"
+          (click)="logout()">
+          Cerrar Sesión
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>

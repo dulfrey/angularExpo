@@ -1,0 +1,58 @@
+<div class="auth-page">
+  <div class="container page">
+    <div class="row">
+
+      <div class="col-md-6 offset-md-3 col-xs-12">
+
+
+
+        <p class="text-xs-center">
+
+
+        </p>
+
+        <app-list-errors [errors]="errors"></app-list-errors>
+
+        <form [formGroup]="authForm" (ngSubmit)="submitForm()">
+
+          <fieldset [disabled]="isSubmitting">
+
+            <fieldset class="form-group">
+              <input
+
+
+
+                 />
+            </fieldset>
+
+
+            <fieldset class="form-group">
+              <input
+
+
+
+
+                />
+            </fieldset>
+
+
+            <fieldset class="form-group">
+              <input
+
+
+
+                 />
+            </fieldset>
+
+
+            
+          </fieldset>
+
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
