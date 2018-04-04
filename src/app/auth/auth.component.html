@@ -1,58 +1,45 @@
 <div class="auth-page">
-  <div class="container page">
-    <div class="row">
+ <div class="container page">
+   <div class="row">
 
-      <div class="col-md-6 offset-md-3 col-xs-12">
+     <div class="col-md-6 offset-md-3 col-xs-12">
+       <h1 class="text-xs-center">{{ title }}</h1>
+       <p class="text-xs-center">
+         <a [routerLink]="['/login']" *ngIf="authType == 'register'">Tiene una cuenta?</a>
+         <a [routerLink]="['/register']" *ngIf="authType == 'login'">Cree una cuenta nueva</a>
+       </p>
+       <app-list-errors [errors]="errors"></app-list-errors>
+       <form [formGroup]="authForm" (ngSubmit)="submitForm()">
+         <fieldset [disabled]="isSubmitting">
+           <fieldset class="form-group">
+             <input
+               formControlName="username"
+               placeholder="nombre de usuario"
+               class="form-control form-control-lg"
+               type="text"
+               *ngIf="authType == 'register'" />
+           </fieldset>
+           <fieldset class="form-group">
+             <input
+               formControlName="email"
+               placeholder="correo electrónico"
+               class="form-control form-control-lg"
+               type="text" />
+           </fieldset>
+           <fieldset class="form-group">
+             <input
+               formControlName="password"
+               placeholder="contraseña"
+               class="form-control form-control-lg"
+               type="password" />
+           </fieldset>
+           <button class="btn btn-lg btn-primary pull-xs-right" [disabled]="!authForm.valid" type="submit">
+             {{ title }}
+           </button>
+         </fieldset>
+       </form>
+     </div>
 
-
-
-        <p class="text-xs-center">
-
-
-        </p>
-
-        <app-list-errors [errors]="errors"></app-list-errors>
-
-        <form [formGroup]="authForm" (ngSubmit)="submitForm()">
-
-          <fieldset [disabled]="isSubmitting">
-
-            <fieldset class="form-group">
-              <input
-
-
-
-                 />
-            </fieldset>
-
-
-            <fieldset class="form-group">
-              <input
-
-
-
-
-                />
-            </fieldset>
-
-
-            <fieldset class="form-group">
-              <input
-
-
-
-                 />
-            </fieldset>
-
-
-            
-          </fieldset>
-
-
-        </form>
-
-      </div>
-
-    </div>
-  </div>
+   </div>
+ </div>
 </div>

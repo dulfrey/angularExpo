@@ -12,35 +12,44 @@
 
             <fieldset class="form-group">
               <input class="form-control"
-
-            />    
+                type="text"
+                placeholder="URL de la foto de perfil"
+                formControlName="image" />
             </fieldset>
 
             <fieldset class="form-group">
               <input class="form-control form-control-lg"
-
-            />
+                type="text"
+                placeholder="nombre de usuario"
+                formControlName="username" />
             </fieldset>
 
             <fieldset class="form-group">
-
-
-            </fieldset>
-
-            <fieldset class="form-group">
-              <input class="form-control form-control-lg"
-
-             />
+              <textarea class="form-control form-control-lg"
+                rows="8"
+                placeholder="escriba algo sobre usted"
+                formControlName="bio">
+              </textarea>
             </fieldset>
 
             <fieldset class="form-group">
               <input class="form-control form-control-lg"
-
-
-              />
+                type="email"
+                placeholder="correo electrónico"
+                formControlName="email" />
             </fieldset>
 
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+                type="password"
+                placeholder="nueva contraseña"
+                formControlName="password" />
+            </fieldset>
 
+            <button class="btn btn-lg btn-primary pull-xs-right"
+              type="submit">
+              Actualizar
+            </button>
 
           </fieldset>
         </form>
